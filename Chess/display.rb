@@ -38,16 +38,14 @@ class Display
 end
 
 ############Testing
-test_board = Board.new
-test_display = Display.new(test_board)
-until false
-    test_display.render
-    test_display.cursor.get_input
-end
-
-# # puts "this is light blue with red background".colorize(:color => :light_blue, :background => :red)
-
-# puts "pawn".colorize(:color => :light_blue, :background => :white)
-# puts "pawn".blue.on_white.blink
-# print String.colors
-# print String.color_samples
+# test_board = Board.new
+# test_display = Display.new(test_board)
+# until false
+#     test_display.render
+#     test_display.cursor.get_input
+# end
+# test_board = Board.new
+# test_display = Display.new(test_board)
+# until false
+#     test_display.render
+# end

@@ -8,7 +8,9 @@ module Stepable
       new_x, new_y = current_x + dx, current_y + dy
       
       possible_pos = [new_x, new_y]
-      coordinates << possible_pos if @board.valid_pos?(possible_pos)
+      if @board.valid_pos?(possible_pos) && @board[possible_pos].color != self.color
+        coordinates << possible_pos 
+      end
     end
     coordinates
   end
@@ -45,7 +47,7 @@ class King < Piece
   include Stepable
   
   def symbol
-    " ♛ "
+    " ♚ "
   end
 
   protected
